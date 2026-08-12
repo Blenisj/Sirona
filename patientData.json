@@ -1,0 +1,23 @@
+[
+
+  { "id": "1", "patientName": "Alice Johnson", "modality": "CT",  "studyDate": "2024-10-15", "status": "PENDING",     "report": null },
+
+  { "id": "2", "patientName": "Bob Martinez",  "modality": "MRI", "studyDate": "2024-10-17", "status": "PENDING",     "report": null },
+
+  { "id": "3", "patientName": "Carol White",   "modality": "XR",  "studyDate": "2024-10-18", "status": "IN_PROGRESS", "report": null },
+
+  { "id": "4", "patientName": "David Kim",     "modality": "US",  "studyDate": "2024-10-20", "status": "PENDING",     "report": null },
+
+  { "id": "5", "patientName": "Eva Brown",     "modality": "CT",  "studyDate": "2024-10-21", "status": "COMPLETED",   "report": "No acute findings." },
+
+  { "id": "6", "patientName": "Frank Lee",     "modality": "MRI", "studyDate": "2024-10-22", "status": "PENDING",     "report": null },
+
+  { "id": "7", "patientName": "Grace Patel",   "modality": "CT",  "studyDate": "2024-10-23", "status": "IN_PROGRESS", "report": null },
+
+  { "id": "8", "patientName": "Henry Nguyen",  "modality": "XR",  "studyDate": "2024-10-25", "status": "COMPLETED",   "report": "Mild cardiomegaly noted." },
+
+  { "id": "9", "patientName": "Iris Chen",     "modality": "US",  "studyDate": "2024-10-26", "status": "PENDING",     "report": null },
+
+  { "id": "10","patientName": "James Wright",  "modality": "MRI", "studyDate": "2024-10-28", "status": "PENDING",     "report": null }
+
+]
