@@ -4,7 +4,7 @@ import { CirclePlus, RefreshCw } from "lucide-react";
 import patientData from "./data/patientData.json";
 import DetailDrawer from "./components/DetailDrawer";
 import WorklistTable from "./components/WorklistTable";
-import { FILTERS, labels } from "./utils/worklist";
+import { filters, labels } from "./utils/worklist";
 import "./styles.css";
 
 function App() {
@@ -63,7 +63,7 @@ function App() {
         </section>
         <section className="worklist">
           <nav className="filters" role="tablist">
-            {FILTERS.map((value) => (
+            {filters.map((value) => (
               <button
                 key={value}
                 className={filter === value ? "active" : ""}

@@ -1,4 +1,4 @@
-export const FILTERS = ["ALL", "PENDING", "IN_PROGRESS", "COMPLETED"];
+export const filters = ["ALL", "PENDING", "IN_PROGRESS", "COMPLETED"];
 
 export const labels = {
   PENDING: "Pending",
