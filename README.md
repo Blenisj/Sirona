@@ -14,6 +14,8 @@ A. sorted by studyDate
 
 ## Features/comments
 
+- I Used React as my framework
+
 - Wanted to be sure to compartmentalize some logic like the modals the status badge, this just seems like good practice and makes it easier for feature implementation down the road. Anything that that was either utilized more than once or was a large function, was made into its own file and called upon.
 
 - opted to use a modal to view case details, the sidebar left a lot of empty space. Having the modal in the center of the screen seemed more appropriate for the amount of detail shown.
