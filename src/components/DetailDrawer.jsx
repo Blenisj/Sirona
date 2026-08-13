@@ -1,8 +1,9 @@
 import React from "react";
 import { FileText, X } from "lucide-react";
 import StatusBadge from "./StatusBadge";
+import { formatDate, labels, modalities } from "../utils/worklist";
 
-function DetailDrawer({ item, close, submit, labels, modalities, formatDate }) {
+function DetailDrawer({ item, close, submit }) {
   const [report, setReport] = React.useState(item.report || "");
   const [submitted, setSubmitted] = React.useState(false);
   const editable = item.status !== "COMPLETED";
@@ -10,11 +11,10 @@ function DetailDrawer({ item, close, submit, labels, modalities, formatDate }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (report.trim()) {
-    submit(item.id, report.trim());
+      submit(item.id, report.trim());
       setSubmitted(true);
     }
   };
-
 
   if (submitted) {
     return (
@@ -59,7 +59,11 @@ function DetailDrawer({ item, close, submit, labels, modalities, formatDate }) {
             <p className="eyebrow">Case {item.id}</p>
             <h2 id="case-detail-title">{item.patientName}</h2>
           </div>
-          <button className="icon-circle close" onClick={close} aria-label="Close details">
+          <button
+            className="icon-circle close"
+            onClick={close}
+            aria-label="Close details"
+          >
             <X size={18} />
           </button>
         </header>

@@ -1,7 +1,8 @@
 import { ChevronRight } from "lucide-react";
 import StatusBadge from "./StatusBadge";
+import { formatDate, labels, modalities } from "../utils/worklist";
 
-function WorklistTable({ visible, labels, modalities, formatDate, onSelect }) {
+function WorklistTable({ visible, onSelect }) {
   return (
     <div className="table-wrap">
       <table>

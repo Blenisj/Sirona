@@ -1,14 +1,13 @@
-##  Install dependencies (run BOTH)
+##  Install dependencies
 ```powershell
-# In repo root
 npm install
 run dev
 ```
 
 ## Questions
-```
+
 1. can/should the user be allowed to created cases?
-```
+
 
 ## Features/comments
 

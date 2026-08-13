@@ -2,20 +2,10 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { CirclePlus, RefreshCw } from "lucide-react";
 import patientData from "./data/patientData.json";
-import "./styles.css";
 import DetailDrawer from "./components/DetailDrawer";
 import WorklistTable from "./components/WorklistTable";
-
-const FILTERS = ["ALL", "PENDING", "IN_PROGRESS", "COMPLETED"];
-const labels = {PENDING: "Pending", IN_PROGRESS: "In progress",COMPLETED: "Completed"};
-const modalities = { CT: "CT", MRI: "MRI", XR: "X-ray", US: "Ultrasound" };
-
-const formatDate = (date) =>
-  new Intl.DateTimeFormat("en-US", {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-  }).format(new Date(`${date}T12:00:00`));
+import { FILTERS, labels } from "./utils/worklist";
+import "./styles.css";
 
 function App() {
   const [cases, setCases] = React.useState(patientData);
@@ -28,6 +18,7 @@ function App() {
     status === "ALL"
       ? cases.length
       : cases.filter((item) => item.status === status).length;
+
   const submit = (id, report) => {
     setCases((current) =>
       current.map((item) =>
@@ -35,11 +26,12 @@ function App() {
       ),
     );
   };
+
   return (
     <div className="app">
       <main>
         <section className="heading">
-          <div className="summary-metric">
+          <div>
             <h1>Worklist</h1>
           </div>
         </section>
@@ -87,13 +79,7 @@ function App() {
               </button>
             ))}
           </nav>
-          <WorklistTable
-            visible={visible}
-            labels={labels}
-            modalities={modalities}
-            formatDate={formatDate}
-            onSelect={setSelectedId}
-          />
+          <WorklistTable visible={visible} onSelect={setSelectedId} />
         </section>
       </main>
       {selected && (
@@ -101,9 +87,6 @@ function App() {
           item={selected}
           close={() => setSelectedId(null)}
           submit={submit}
-          labels={labels}
-          modalities={modalities}
-          formatDate={formatDate}
         />
       )}
     </div>
