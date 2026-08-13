@@ -6,10 +6,11 @@ run dev
 
 ## Questions
 
-1. can/should the user be allowed to created cases? (created refresh and new assignment buttons just to fill up space, no function)
+Q. can/should the user be allowed to created cases?
+A.created refresh and new assignment buttons just to fill up space, no function
 
-2. should the initial sorting when the page is loaded be based on ID, patient name, or study date?
-
+Q. should the initial sorting when the page is loaded be based on ID, patient name, or study date? 
+A. sorted by studyDate
 
 ## Features/comments
 
